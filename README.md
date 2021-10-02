@@ -10,12 +10,6 @@ Use `git` submodules: open a command prompt in your project folder and then:
 git submodule add https://github.com/Srynetix/godot-plugin-mathext addons/mathext
 ```
 
-It requires the `Newtonsoft.Json` NuGet package in your project:
-
-```
-dotnet add package Newtonsoft.Json --version 13.0.1
-```
-
 ## How to use
 
 ```cs
@@ -30,4 +24,8 @@ Transform AlignWithY(Transform transform, Vector3 newY);
 /// Align a transform with a Y vector with interpolation.
 Transform InterpolateAlignWithY(Transform transform, Vector3 newY, float weight);
 /// => var xform = MathExt.AlignWithY(this.transform, Vector2.Left, 0.25f);
+
+/// Generate a random float between two values.
+float RandRange(float from, float to)
+/// => var r = MathExt.RandRange(0.0f, 100.0f);
 ```

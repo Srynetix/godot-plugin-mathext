@@ -26,5 +26,10 @@ namespace SxGD
             var aligned = AlignWithY(transform, newY);
             return transform.InterpolateWith(aligned, weight);
         }
+
+        public static float RandRange(float from, float to)
+        {
+            return (float)GD.RandRange(from, to);
+        }
     }
 }
