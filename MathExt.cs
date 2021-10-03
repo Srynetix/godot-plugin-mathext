@@ -31,5 +31,18 @@ namespace SxGD
         {
             return (float)GD.RandRange(from, to);
         }
+
+        public static Vector2 RandRange(Vector2 from, Vector2 to)
+        {
+            return new Vector2(
+                MathExt.RandRange(from.x, to.x),
+                MathExt.RandRange(from.y, to.y)
+            );
+        }
+
+        public static float Map(float value, float istart, float istop, float ostart, float ostop)
+        {
+            return ostart + ((ostop - ostart) * ((value - istart) / (istop - istart)));
+        }
     }
 }
